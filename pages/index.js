@@ -2,7 +2,7 @@ import { supabase } from "../utils/supabase";
 import Link from "next/link";
 
 export default function Home({ lessons }) {
-  console.log({ lessons });
+  console.log(supabase.auth.user());
   return (
     <div className="w-full max-w-3xl px-2 mx-auto my-16">
       {lessons.map((lesson) => (
